@@ -11,6 +11,7 @@ class ToDoList extends Component{
         };
 
         this.addItem = this.addItem.bind(this);
+        this.deleteItem = this.deleteItem.bind(this);
     }
 
     addItem(e){
@@ -36,6 +37,16 @@ class ToDoList extends Component{
         e.preventDefault();
     }
 
+    deleteItem(key){
+        var filteredItems = this.state.items.filter(function (item) {
+            return (item.key !== key)
+        });
+
+        this.setState({
+            items:filteredItems
+        });
+    }
+
     render(){
         return <div className={'todoListMain'}>
             <div className={"header"}>
@@ -47,7 +58,7 @@ class ToDoList extends Component{
                 </form>
             </div>
 
-            <TodoItems enteries={this.state.items} />
+            <TodoItems enteries={this.state.items} delete={this.deleteItem}/>
         </div>
     }
 }

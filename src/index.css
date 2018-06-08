@@ -1,10 +1,58 @@
 body{
     padding: 50px;
-    background-color: #8a898b;
-    font-family: sans-serif;
+    background-color: fuchsia;
 }
 
 #container{
     display: flex;
     justify-content: flex;
+}
+
+.todoListMain{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.todoListMain .header form input{
+    padding: 10px;
+    font-size: 20px;
+    margin-right: 0px;
+    font-family: Roboto;
+    border: none;
+}
+
+.todoListMain .header form input:focus{
+    outline:0;
+}
+
+.todoListMain .header form button {
+    padding: 10px;
+    font-size: 20px;
+    margin-left: 0px;
+    font-family: Roboto;
+    background-color: aqua;
+    transition: 0.5s;
+    border:none;
+}
+
+.todoListMain .header form button:hover{
+    background-color: white;
+}
+
+.theList{
+    font-family: Roboto;
+    list-style-type: none;
+    padding: 0;
+}
+
+.theList li{
+    background-color: aqua;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.theList li:hover{
+    background-color:white;
 }

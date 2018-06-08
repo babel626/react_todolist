@@ -6,8 +6,6 @@ import TodoList from "./todolist";
 var destination = document.querySelector("#container");
 
 ReactDOM.render(
-  <div>
-      <TodoList/>
-  </div>,
+      <TodoList/>,
     destination
 );
